@@ -1,10 +1,10 @@
 # TeacherScoreSysByDUTCSF
 基于IDEA+JAVA+Swing+MySQL实现的可登录学生成绩查询操作系统
 ## Basic
-@ encoding:utf-8' 
+@ encoding:utf-8  
 @ author:Group of DUTCS1804  
-@ software:IntelliJ IDEA
-@ SQL:MySQL
+@ software:IntelliJ IDEA  
+@ SQL:MySQL  
 ## Operater
 @ 代码存放于目录内src文件夹下  
 @@ HelloWindow.HelloWindow为登陆界面主函数入口，也是整个系统的入口  
