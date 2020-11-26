@@ -15,10 +15,10 @@ public class Ask extends JFrame {
     String USER = "root";
     String PASS = "19991210";*/
 
-    String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     String DB_URL = "jdbc:mysql://localhost:3306/student?serverTimezone=UTC&useSSL=false";
     String USER = "root";
-    String PASS = "19991210";
+    String PASS = "12345678";
 
     JLabel jlnumber = new JLabel("学号：");
     JLabel jlname = new JLabel("姓名：");

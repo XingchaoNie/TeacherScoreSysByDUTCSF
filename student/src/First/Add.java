@@ -92,10 +92,10 @@ public class Add extends JFrame {
         buttonadd.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                // String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-                String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+                String JDBC_DRIVER = "com.mysql.jdbc.Driver";
                 String DB_URL = "jdbc:mysql://localhost:3306/student?serverTimezone=UTC&useSSL=false";
                 String USER = "root";
-                String PASS = "19991210";
+                String PASS = "12345678";
 
                 // Add
                 Connection conn = null;
@@ -111,13 +111,14 @@ public class Add extends JFrame {
                     stat = conn.createStatement();
 
                     String sql = "INSERT INTO student (sno,name,age,sex,math,english,data) values("
-                            +jtnumber.getText()+","+jtname.getText()+","+jtage.getText()
-                            +","+jtsex.getText()+","+jtmath.getText()+","+jtenglish.getText()+","+jtdata.getText() + ")";
+                            +jtnumber.getText()+",\""+jtname.getText()+"\","+jtage.getText()
+                            +",\""+jtsex.getText()+"\","+jtmath.getText()+","+jtenglish.getText()+","+jtdata.getText() + ")";
 
                     System.out.println("MySQL 连接成功!");
                     stat = conn.createStatement();
                     stat.executeUpdate(sql);
                     System.out.println("插入数据成功!");
+                    JOptionPane.showMessageDialog(null,"录入成功");
 
                 } catch (SQLException b) {
                     b.printStackTrace();

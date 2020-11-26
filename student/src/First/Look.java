@@ -10,17 +10,17 @@ import First.Window;
 
 public class Look extends JFrame {
 
-    String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
+    String JDBC_DRIVER = "com.mysql.jdbc.Driver";
     String DB_URL = "jdbc:mysql://localhost:3306/student?serverTimezone=UTC&useSSL=false";
     String USER = "root";
-    String PASS = "19991210";
+    String PASS = "12345678";
 
     Connection conn = null;
     PreparedStatement ps = null;
     ResultSet res = null;
 
-    JButton buttonlook = new JButton("浏览");
-    JButton buttonreturn = new JButton("返回");
+    /*JButton buttonlook = new JButton("浏览");
+    JButton buttonreturn = new JButton("返回");*/
 
     JTable jtable;
     JScrollPane jscrollpane = new JScrollPane();
@@ -34,15 +34,15 @@ public class Look extends JFrame {
         columnNames = new Vector<>();
         columnNames.add("学号");
         columnNames.add("姓名");
-        columnNames.add("出生时间");
+        columnNames.add("年龄");
         columnNames.add("性别");
         columnNames.add("数学成绩");
         columnNames.add("英语成绩");
         columnNames.add("数据结构成绩");
         rowData = new Vector<>();
 
-        jpforbutton.add(buttonlook);
-        jpforbutton.add(buttonreturn);
+        /*jpforbutton.add(buttonlook);
+        jpforbutton.add(buttonreturn);*/
 
         try {
             Class.forName(JDBC_DRIVER);

@@ -19,12 +19,12 @@ public class HelloWindow extends JFrame implements ActionListener {
     public JButton denglu = new JButton("登录");
     public JButton zhuce = new JButton("注册");
     public JButton updatepass = new JButton("修改密码");
-    public JButton deleteuser = new JButton("删除用户");
+    public JButton deleteuser = new JButton("用户注销");
 
 
     public HelloWindow() {
         Font font = new Font("宋体", Font.BOLD, 12);
-        super.setTitle("欢迎登录本系统");
+        super.setTitle("学生成绩管理系统");
         pan.setLayout(null);
         namelab.setBounds(20, 20, 60, 30);
         nametext.setBounds(90, 20, 140, 30);
