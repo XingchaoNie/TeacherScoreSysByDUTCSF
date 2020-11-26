@@ -12,7 +12,7 @@
 ## Environment
 @ 环境支持com.mysql.cj.jdbc.Driver  
 @ jar包存于目录下mysql-connector-java-5.1.7-bin.jar  
-@ 用户信息数据库名称：mingshuaitechnology.workers(id, admin, password)
+@ 用户信息数据库名称：mingshuaitechnology.workers(id, admin, password)  
 @ 教师信息数据库名称：已完成，待加  
 ## Function
 @ 用户登录、注册、密码修改、信息注销  
