@@ -13,7 +13,10 @@
 @ 环境支持com.mysql.cj.jdbc.Driver  
 @ jar包存于目录下mysql-connector-java-5.1.7-bin.jar  
 @ 用户信息数据库名称：mingshuaitechnology.workers(id, admin, password)  
-@ 教师信息数据库名称：已完成，待加  
+@ 教师信息数据库名称：student.student  
 ## Function
 @ 用户登录、注册、密码修改、信息注销  
-@ 教师功能：已完成，待加  
+@ 教师功能：添加、修改、浏览、删除、查询、注销登录  
+## UpGrade
+@ 增加了美工优化，完成了用户操作界面的GIF背景设置
+@ 文件夹\student\out\artifacts\student_jar下存放了JAVA可执行的jar包  
