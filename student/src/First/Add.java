@@ -136,6 +136,7 @@ public class Add extends JFrame {
                 }
             }
         });
+
         this.setLocation(400, 300);
         this.setSize(350, 300);
         this.setVisible(true);

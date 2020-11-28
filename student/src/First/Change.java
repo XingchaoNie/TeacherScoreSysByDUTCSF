@@ -15,7 +15,7 @@ public class Change extends JFrame {
 
     JLabel jlnumber = new JLabel("学号：");
     JLabel jlname = new JLabel("姓名：");
-    JLabel jlage = new JLabel("\u51FA\u751F\u65F6\u95F4\uFF1A");
+    JLabel jlage = new JLabel("年龄：");
     JLabel jlsex = new JLabel("性别：");
     JLabel jlmath = new JLabel("数学成绩：");
     JLabel jlenglish = new JLabel("\u82F1\u8BED\u6210\u7EE9\uFF1A");

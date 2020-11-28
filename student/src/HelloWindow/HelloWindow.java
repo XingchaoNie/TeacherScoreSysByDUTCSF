@@ -2,7 +2,7 @@ package HelloWindow;
 
 import First.Window;
 
-import java.awt.Font;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.*;
@@ -26,15 +26,17 @@ public class HelloWindow extends JFrame implements ActionListener {
         Font font = new Font("宋体", Font.BOLD, 12);
         super.setTitle("学生成绩管理系统");
         pan.setLayout(null);
-        namelab.setBounds(20, 20, 60, 30);
-        nametext.setBounds(90, 20, 140, 30);
-        passlab.setBounds(20, 60, 60, 30);
-        passtext.setBounds(90, 60, 140, 30);
-        denglu.setBounds(30, 120, 90, 20);
-        zhuce.setBounds(140, 120, 90, 20);
-        updatepass.setBounds(30, 150, 90, 20);
-        deleteuser.setBounds(140, 150, 90, 20);
+        namelab.setBounds(140, 50, 60, 30);
+        nametext.setBounds(210, 50, 140, 30);
+        passlab.setBounds(140, 90, 60, 30);
+        passtext.setBounds(210, 90, 140, 30);
+        denglu.setBounds(150, 170, 90, 20);
+        zhuce.setBounds(270, 170, 90, 20);
+        updatepass.setBounds(150, 200, 90, 20);
+        deleteuser.setBounds(270, 200, 90, 20);
 
+        nametext.setOpaque(false);
+        passtext.setOpaque(false);
         pan.add(namelab);
         pan.add(nametext);
         pan.add(passlab);
@@ -54,9 +56,17 @@ public class HelloWindow extends JFrame implements ActionListener {
         updatepass.addActionListener(this);
         deleteuser.addActionListener(this);
 
+        ImageIcon icon=new ImageIcon("C:\\Users\\ASUS\\Desktop\\student\\src\\HelloWindow\\123.gif");
+        JLabel HelloBack = new JLabel(icon);
+        HelloBack.setBounds(0,0,icon.getIconWidth(),icon.getIconHeight());
+        super.getLayeredPane().add(HelloBack, new Integer(Integer.MIN_VALUE));
+        JPanel j=(JPanel)super.getContentPane();
+        j.setOpaque(false);
+        pan.setOpaque(false);
         super.add(pan);
-        super.setLocation(600,350);
-        super.setSize(300, 250);
+        super.setResizable(false);
+        super.setLocation(500,270);
+        super.setSize(icon.getIconWidth(),icon.getIconHeight());
         super.setVisible(true);
     }
 
@@ -106,6 +116,7 @@ public class HelloWindow extends JFrame implements ActionListener {
         pan.setEnabled(false);
         JFrame frame1 = new JFrame("密码修改");
         frame1.setSize(250, 200);
+        frame1.setLocationRelativeTo(null);
         JPanel updatepass = new JPanel();
         JLabel namelab1 = new JLabel("用户名");
         JLabel passlab1 = new JLabel("旧密码");
@@ -171,5 +182,4 @@ public class HelloWindow extends JFrame implements ActionListener {
         HelloSQL s = new HelloSQL();
         s.delete(username, password);
     }
-
 }

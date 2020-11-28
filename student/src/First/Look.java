@@ -83,7 +83,7 @@ public class Look extends JFrame {
 
         this.setTitle("浏览学生信息");
         System.out.println("******");
-        getContentPane().setLayout(new GridLayout(2, 5));
+        getContentPane().setLayout(new GridLayout(2, 6));
         getContentPane().add(jpforbutton);
         this.setLocation(300, 300);
         this.setSize(500, 300);

@@ -1,5 +1,7 @@
 package First;
 
+import HelloWindow.HelloWindow;
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -14,6 +16,7 @@ public class Window extends JFrame {
             public void run() {
                 try {
                     Window frame = new Window();
+
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -25,7 +28,6 @@ public class Window extends JFrame {
     public Window() {
         setTitle("学生信息管理系统");
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setBounds(200, 200, 800, 600);
         contentPane = new JPanel();
         contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
         setContentPane(contentPane);
@@ -42,7 +44,7 @@ public class Window extends JFrame {
                 f.setVisible(true);
             }
         });
-        btnNewButton.setBounds(120, 300, 200, 40);
+        btnNewButton.setBounds(10, 10, 200, 40);
         contentPane.add(btnNewButton);
 
         JButton btnNewButton_1 = new JButton("\u4FE1\u606F\u5220\u9664");
@@ -53,7 +55,7 @@ public class Window extends JFrame {
                 f.setVisible(true);
             }
         });
-        btnNewButton_1.setBounds(480, 300, 200, 40);
+        btnNewButton_1.setBounds(370, 10, 200, 40);
         contentPane.add(btnNewButton_1);
 
         JButton btnNewButton_2 = new JButton("\u67E5\u627E");
@@ -64,7 +66,7 @@ public class Window extends JFrame {
                 f.setVisible(true);
             }
         });
-        btnNewButton_2.setBounds(120, 370, 200, 40);
+        btnNewButton_2.setBounds(10, 110, 200, 40);
         contentPane.add(btnNewButton_2);
 
         JButton btnNewButton_3 = new JButton("\u6D4F\u89C8");
@@ -75,7 +77,7 @@ public class Window extends JFrame {
 	            f.setVisible(true);
             }
         });
-        btnNewButton_3.setBounds(480, 370, 200, 40);
+        btnNewButton_3.setBounds(370, 110, 200, 40);
         contentPane.add(btnNewButton_3);
 
         JButton btnNewButton_4 = new JButton("\u4FE1\u606F\u4FEE\u6539");
@@ -86,15 +88,29 @@ public class Window extends JFrame {
                 f.setVisible(true);
             }
         });
-        btnNewButton_4.setBounds(120, 440, 200, 40);
+        btnNewButton_4.setBounds(10, 210, 200, 40);
         contentPane.add(btnNewButton_4);
 
-        ImageIcon background = new ImageIcon(Window.class.getResource("dut800.jpg"));
-        background.setImage(background.getImage().getScaledInstance(background.getIconWidth(),background.getIconHeight(), Image.SCALE_DEFAULT));
-        JLabel lb = new JLabel();
-        lb.setBounds(0, 0, 800, 300);
-        lb.setIcon(background);
-        contentPane.add(lb);
-    }
+        JButton btnNewButton_5 = new JButton("\u6ce8\u9500\u767b\u5f55");
+        btnNewButton_5.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
+                new HelloWindow();
+            }
+        });
+        btnNewButton_5.setBounds(370, 210, 200, 40);
+        contentPane.add(btnNewButton_5);
 
+        ImageIcon icon=new ImageIcon("C:\\Users\\ASUS\\Desktop\\student\\src\\First\\1234.gif");
+        JLabel HelloBack = new JLabel(icon);
+        HelloBack.setBounds(0,0,icon.getIconWidth(),icon.getIconHeight());
+        super.getLayeredPane().add(HelloBack, new Integer(Integer.MIN_VALUE));
+        JPanel j=(JPanel)super.getContentPane();
+        super.setSize(icon.getIconWidth(),icon.getIconHeight()-25);
+        super.setLocationRelativeTo(null);
+        super.setResizable(false);
+        j.setOpaque(false);
+
+    }
 }
